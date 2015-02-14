@@ -22,7 +22,7 @@ public class Person {
  public String formatirajDatum(String datumRodjenja){
      try{
          DateTimeFormatter dtf1 = DateTimeFormatter.ofPattern("ddMMyyyy");
-         DateTimeFormatter dtf2 = DateTimeFormatter.ofPattern("dd. MM yyyy.");
+         DateTimeFormatter dtf2 = DateTimeFormatter.ofPattern("dd. MM. yyyy");
          LocalDate datum = LocalDate.parse(datumRodjenja, dtf1);
          return datum.format(dtf2);
      }catch(Exception ex){
